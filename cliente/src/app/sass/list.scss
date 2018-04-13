@@ -1,0 +1,72 @@
+.list-container {
+
+  .item-container {
+    background-color: white;
+    margin-top: 10px;
+
+    .image {
+      text-align: center;
+      padding-top: 10px;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .details {
+      border-bottom: 1px dashed black;
+      padding: 10px 15px;
+      height: 100%;
+
+      @media (min-width: 992px) {
+        border-bottom: none;
+        border-right: 1px dashed black;
+        padding-left: 0;
+      }
+
+      div {
+        padding-bottom: 10px;
+      }
+
+      .name {
+        color: $text-light-blue;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .amenities {
+        img {
+          margin-right: 15px;
+        }
+      }
+    }
+
+    .cta {
+      text-align: center;
+      padding: 15px 0;
+
+      @media (min-width: 992px) {
+        padding: 10%;
+      }
+
+      .price {
+        color: $price;
+        font-size: 50px;
+        font-weight: bold;
+      }
+
+      button {
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        width: 90%;
+        background-color: $cta-blue;
+        border-color: $cta-blue;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+      }
+    }
+
+  }
+}

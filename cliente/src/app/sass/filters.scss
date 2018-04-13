@@ -1,0 +1,105 @@
+.filters-container {
+
+  color: $text-light-blue;
+  margin-bottom: 5px;
+
+  .filter-mobile {
+    background-color: white;
+    @media (min-width: 992px) {
+      display: none;
+    }
+
+    .filter {
+      width: 100%;
+      text-align: center;
+      background-color: white;
+      border: none;
+      text-decoration: none;
+      padding: 20px;
+      font-size: 20px;
+
+      &:focus {
+        text-decoration: none;
+      }
+
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+
+
+  .filter-desk {
+    display: none;
+    margin-top: 10px;
+
+    @media (min-width: 992px) {
+      display: block;
+    }
+
+    .filter {
+      padding: 15px 0;
+      color: black;
+      background-color: white;
+      margin-bottom: 5px;
+    }
+
+    .filter-by-name {
+      background-color: white;
+      margin-bottom: 5px;
+      @media (min-width: 992px) {
+      }
+
+      button {
+        color: $text-light-blue;
+      }
+    }
+
+
+    .filter-by-stars {
+      background-color: white;
+      margin-bottom: 5px;
+      @media (min-width: 992px) {
+      }
+
+      button {
+        color: $text-light-blue;
+      }
+
+      .form {
+        padding-left: 10px;
+
+        input {
+          width: 25px;
+        }
+      }
+    }
+
+  }
+
+  .filter-by-name {
+
+    padding: 5px 25px;
+
+
+
+    img {
+      color: $blue;
+      width: 20px;
+    }
+
+    .form {
+      input {
+        width: 50%;
+        font-size: 16px;
+        padding: 5px;
+      }
+      button {
+        color: white;
+        background-color: $cta-blue;
+        width: auto;
+        float: right;
+      }
+    }
+  }
+}

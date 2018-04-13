@@ -1,0 +1,9 @@
+{
+  "author": {
+    "name": "Mariano",
+    "lastname": "Chaparro"
+  },
+  "api": {
+    "domain": "https://api.mercadolibre.com"
+  }
+}
