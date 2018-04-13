@@ -6,15 +6,31 @@ var APP_DIR = path.resolve(__dirname, 'src/app');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   title: 'Navent - FrontEnd',
   template: './src/index.html',
   filename: 'index.html',
   inject: 'body',
+  minify: {
+    removeTagWhitespace: true,
+    removeComments: true,
+    collapseWhitespace: true,
+    collapseInlineTagWhitespace: true,
+  },
 });
+
 const CopyWebpackPluginConfig = new CopyWebpackPlugin([
   {from: 'src/static'}
 ]);
+
+const UglifyJsPlugin = new webpack.optimize.UglifyJsPlugin({
+  compress: {
+    warnings: false,
+  },
+  comments: false,
+  sourceMap: false,
+});
 
 const config = {
   entry: APP_DIR + '/index.js',
@@ -53,7 +69,8 @@ const config = {
   },
   plugins: [
     HtmlWebpackPluginConfig,
-    CopyWebpackPluginConfig
+    CopyWebpackPluginConfig,
+    UglifyJsPlugin
   ]
 };
 
